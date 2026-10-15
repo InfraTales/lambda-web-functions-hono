@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Wait a week before proposing a new release, so a bad publish has time to be pulled.
+    cooldown:
+      default-days: 7
+    groups:
+      aws-sdk:
+        patterns: ['@aws-sdk/*']
+      cdk:
+        patterns: ['aws-cdk', 'aws-cdk-lib', 'constructs', 'cdk-nag']
+      hono:
+        patterns: ['hono', '@hono/*']
+      dev-tools:
+        dependency-type: development
+        exclude-patterns: ['aws-cdk']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7

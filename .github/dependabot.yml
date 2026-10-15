@@ -7,6 +7,11 @@ updates:
     # Wait a week before proposing a new release, so a bad publish has time to be pulled.
     cooldown:
       default-days: 7
+    ignore:
+      # Lambda Web Functions run Node.js 24. Types for a newer Node would let code use
+      # APIs that don't exist in production. Move this with the runtime.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
     groups:
       aws-sdk:
         patterns: ['@aws-sdk/*']

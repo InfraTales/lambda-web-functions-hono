@@ -12,5 +12,5 @@ The short version is below. [docs/security.md](docs/security.md) has the details
 
 - The Web Function endpoint only accepts requests signed by this CloudFront distribution.
 - Creating a link needs an API key from AWS Secrets Manager, checked in constant time.
-- Link targets must be plain http or https URLs, and nobody can take over an existing slug.
+- Link targets must be plain http or https URLs, and the API refuses to overwrite an existing slug.
 - The function's role can read and create links and nothing else.

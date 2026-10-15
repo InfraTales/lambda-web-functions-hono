@@ -2,7 +2,7 @@
 
 These are monthly costs in us-east-1, before the AWS Free Tier. We took every price from the AWS Price List API on 2026-10-15, and the article workspace's `sources/aws-facts.md` links to each source.
 
-## How a Web Function is billed
+## Web Function pricing
 
 | Part | Price | When you pay |
 |---|---|---|

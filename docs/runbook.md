@@ -16,7 +16,7 @@ More than 5% of CloudFront requests got a 5xx for 3 of the last 5 minutes.
 
 ## The app won't start
 
-If every request fails right after a deploy, the server may not be listening within 10 seconds, or a setting is missing. Look for `Missing required environment variable` in the logs. The stack sets `LINKS_TABLE` and `API_KEY_SECRET_ARN`. If one is missing, someone most likely edited the revision by hand.
+If every request fails right after a deploy, the server may not be listening within 10 seconds, or a setting is missing. Look for `Missing required environment variable` in the logs. The stack sets `LINKS_TABLE` and `API_KEY_SECRET_ARN`. If one is missing, check CloudTrail for a manual edit to the revision.
 
 ## A new deploy fails on the revision
 

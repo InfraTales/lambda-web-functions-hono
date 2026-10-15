@@ -34,7 +34,7 @@
     "@aws-sdk/client-cloudformation": "^3.1152.0",
     "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.4",
     "aws-cdk": "^2.1145.0",
     "aws-sdk-client-mock": "^4.1.0",
     "esbuild": "^0.28.2",
